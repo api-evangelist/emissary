@@ -1,4 +1,16 @@
 aid: emissary
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/emissary.png
 name: Emissary
 description: Emissary is a company surfaced as a portfolio company of canaan-partners, gv and added to
   the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
@@ -12,8 +24,23 @@ x-backed-by:
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
+x-enrichment-status: dead-domain
+x-enrichment-note: 'emissary.io resolves to a GoDaddy parked ''domain for sale'' lander;
+  no live API, docs, or developer surface exists to enrich. Re-probed 2026-07-20 and
+  re-confirmed: NS delegated to ns1/ns2.afternic.com (GoDaddy aftermarket); every path
+  — including /.well-known/security.txt, /.well-known/openid-configuration,
+  /.well-known/oauth-authorization-server, /.well-known/api-catalog,
+  /.well-known/ai-plugin.json and /openapi.json — returns HTTP 200 with the byte-identical
+  114-byte /lander redirect stub (md5 e89f75f918dbdcee28604d4e09dd71d7, matching a control
+  request for a nonexistent path), so those 200s are a parking catch-all, not real
+  discovery documents. The only distinct response, /llms.txt, is GoDaddy''s own
+  domain-for-sale notice pointing at https://forsale.godaddy.com/forsale/emissary.io.
+  Subdomains docs./api./developer./app./status.emissary.io do not serve (connection
+  failures). SPF is ''v=spf1 -all'' (mail explicitly disavowed) and MX is null — the
+  signature of a retired domain. No fabricated artifacts added; no well-known, llms,
+  or spec artifacts captured because none belong to the company.'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 apis: []
@@ -25,3 +52,8 @@ maintainers:
 common:
 - type: Website
   url: http://emissary.io
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
