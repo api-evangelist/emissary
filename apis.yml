@@ -23,7 +23,7 @@ x-backed-by:
 - gv
 x-tier: stub
 x-tier-reason: portfolio-lead
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 x-enrichment-status: dead-domain
 x-enrichment-note: 'emissary.io resolves to a GoDaddy parked ''domain for sale'' lander;
   no live API, docs, or developer surface exists to enrich. Re-probed 2026-07-20 and
